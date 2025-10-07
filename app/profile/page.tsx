@@ -128,7 +128,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 via-white to-gray-50">
+    <div className="bg-gradient-to-b pt-16 from-gray-50 via-white to-gray-50">
       <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12">
         <Card className="border bg-white shadow-none">
           <CardContent className="p-6 sm:p-8">

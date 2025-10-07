@@ -1,10 +1,6 @@
 'use client';
 
-import Link from 'next/link';
 import { SignedIn, SignedOut } from '@clerk/nextjs';
-import { Button } from '@/components/ui/button';
-import { Lock } from 'lucide-react';
-import Dashboard from '@/components/Dashboard';
 
 export default function Home() {
   return (
