@@ -53,7 +53,7 @@ export default function Page() {
       if (signInAttempt.status === 'complete') {
         await setActive({ session: signInAttempt.createdSessionId });
         toast.success('Login successful!');
-        router.push(window.location.href);
+        router.push('/');
       } else {
         // Handle other statuses like 'needs-second-factor', etc.
         toast.warning('Additional verification required');
