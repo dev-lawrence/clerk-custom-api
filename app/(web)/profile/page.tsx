@@ -10,6 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { toast } from 'sonner';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useUser } from '@clerk/nextjs';
+import PasskeyManagement from '@/components/PasskeyManagement';
 
 export default function ProfilePage() {
   const { user, isLoaded } = useUser();
@@ -322,6 +323,8 @@ export default function ProfilePage() {
                 </div>
               )}
             </form>
+
+            <PasskeyManagement />
           </CardContent>
         </Card>
       </div>

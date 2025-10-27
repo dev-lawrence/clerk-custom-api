@@ -15,6 +15,7 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { OAuthStrategy } from '@clerk/types';
 import { toast } from 'sonner';
+import { SignInWithPasskeyButton } from '@/components/SignInWithPasskeyButton';
 
 export default function Page() {
   const { isLoaded, signIn, setActive } = useSignIn();
@@ -186,13 +187,17 @@ export default function Page() {
             )}
           </form>
 
-          <Button
-            variant="outline"
-            className="w-full mt-3 cursor-pointer"
-            onClick={() => signInWith('oauth_google')}
-          >
-            Continue with Google
-          </Button>
+          <div className="flex mt-3 items-center justify-center gap-4">
+            <Button
+              variant="outline"
+              className="cursor-pointer"
+              onClick={() => signInWith('oauth_google')}
+            >
+              Continue with Google
+            </Button>
+
+            <SignInWithPasskeyButton />
+          </div>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{' '}
             <a href="sign-up" className="underline underline-offset-4">
